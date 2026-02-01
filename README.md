@@ -8,3 +8,5 @@ This repository is a store of formula/ cheat sheets I have made for modules in t
 * [MECH20442 Dynamics](./MECH20442/)
 * [MECH21342 Data Acquisition & Experimental Methods](./MECH21342/)
 * [MECH22202 Materials 2](./MECH22202/)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
