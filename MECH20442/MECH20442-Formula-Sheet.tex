@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \usepackage[a4paper, margin=1in, headheight=15pt]{geometry}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -6,7 +6,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
+\usepackage{titlesec}
 
+% Header
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{The University of Manchester}
@@ -14,15 +16,47 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \cfoot{\thepage}
 
+% Updating subsection style
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{10pt}{5pt} 
+
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{5pt}{3pt}
+
 \title{\vspace{-1.25cm}MECH20442 Dynamics \\ Formula Sheet}
 \date{}
 \author{}
-
 
 \begin{document}
 \maketitle
 \thispagestyle{fancy}
 
-% Add content here
+\vspace{-2cm}
+\section{Vibrations}
+\subsection{Undamped Free Vibration}
+
+\begin{alignat}{2}
+    & \ddot{x} + \omega_n^2 x = 0 
+        && \qquad \text{Standard Form of Equation of Motion} \\[10pt]
+    & \omega_n = \sqrt{\frac{k}{m}} 
+        && \qquad \text{Natural Frequency (Mass-Spring)} \\[10pt]
+    & x = A \sin \omega_n t + B \cos \omega_n t 
+        && \qquad \text{Displacement (General Solution of EoM)} \\[10pt]
+    & v = \dot{x} = A \omega_n \cos \omega_n t - B \omega_n \sin \omega_n t 
+        && \qquad \text{Velocity (First Time Derivative)} \\[10pt]
+    & a = \ddot{x} = -A \omega_n^2 \sin \omega_n t - B \omega_n^2 \cos \omega_n t 
+        && \qquad \text{Acceleration (Second Time Derivative)} \\[10pt]
+    & x = C \sin(\omega_n t + \phi) 
+        && \qquad \text{Displacement (Amplitude Form)} \\[10pt]
+    & \phi = \tan^{-1} \left( \frac{B}{A} \right) 
+        && \qquad \text{Phase Angle} \\[10pt]
+    & C = \sqrt{A^2 + B^2} 
+        && \qquad \text{Amplitude} \\[10pt]
+    & \tau = \frac{2\pi}{\omega_n} = 2\pi\sqrt{\frac{m}{k}} 
+        && \qquad \text{Period of Oscillation} \\[10pt]
+    & f = \frac{1}{\tau} = \frac{\omega_n}{2\pi} = \frac{1}{2\pi}\sqrt{\frac{k}{m}} 
+        && \qquad \text{Frequency (Hertz)}
+\end{alignat}
+
 
 \end{document}
