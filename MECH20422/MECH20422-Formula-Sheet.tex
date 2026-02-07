@@ -1,11 +1,12 @@
-\documentclass[12pt]{article}
-\usepackage[a4paper, margin=1in, headheight=15pt]{geometry}
+\documentclass[10pt]{article}
+\usepackage[a4paper, margin=0.8in, headheight=15pt]{geometry}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
+\usepackage{titlesec}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -14,15 +15,68 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \cfoot{\thepage}
 
+% Updating subsection style
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{10pt}{5pt} 
+
+\allowdisplaybreaks
+
 \title{\vspace{-1.25cm}MECH20422 Applied Thermodynamics \\ Formula Sheet}
 \date{}
 \author{}
-
 
 \begin{document}
 \maketitle
 \thispagestyle{fancy}
 
-% Add content here
+\vspace{-2cm}
+\section{Basic Thermodynamics}
+
+\begin{alignat}{2}
+    & \delta W = P \, dV
+        && \qquad \text{Boundary Work} \\[10pt]
+    & h = u + pv
+        && \qquad \text{Specific Enthalpy} \\[10pt]
+    & E = U + \text{KE} + \text{PE} = U + m\frac{V^2}{2} + mgz
+        && \qquad \text{Total Energy of a System} \\[10pt]
+    & Q_{\text{net}} - W_{\text{net}} = \Delta E_{\text{system}} = \Delta U + \Delta \text{KE} + \Delta \text{PE}
+        && \qquad \text{General Energy Balance} \\[10pt]
+    & q - w = \Delta u
+        && \qquad \text{Stationary System (Per Unit-Mass)} \\[10pt]
+    & \delta q - \delta w = du
+        && \qquad \text{Stationary System (Differential Form)} \\[10pt]
+    & \sum_{\text{in}} \dot{m} = \sum_{\text{out}} \dot{m}
+        && \qquad \text{Mass Balance (Steady Flow)} \\[10pt]
+    & \dot{m}_1 = \dot{m}_2 \quad \rightarrow \quad \rho_1 V_1 A_1 = \rho_2 V_2 A_2
+        && \qquad \text{Mass Balance (Single Stream)} \\[10pt]
+    & \dot{Q} - \dot{W} = \sum_{\text{out}}\dot{m}\left(h + \frac{V^2}{2} + gz\right) - \sum_{\text{in}}\dot{m}\left(h + \frac{V^2}{2} + gz\right)
+        && \qquad \text{General Steady-Flow Energy Equation} \\[10pt]
+    & \dot{Q} - \dot{W} = \dot{m}\left[h_2 - h_1 + \frac{V_2^2 - V_1^2}{2} + g(z_2 - z_1)\right]
+        && \qquad \text{Single-Stream Energy Balance} \\[10pt]
+    & q - w = h_2 - h_1 + \frac{V_2^2 - V_1^2}{2} + g(z_2 - z_1)
+        && \qquad \text{Unit-Mass Energy Balance} \\[10pt]
+    & \delta q - \delta w = dh + d\text{KE} + d\text{PE}
+        && \qquad \text{Differential Form (Open System)} \\[10pt]
+    & c = \frac{Q}{m \Delta T}
+        && \qquad \text{Specific Heat Capacity} \\[10pt]
+    & c_v = \left( \frac{\partial u}{\partial T} \right)_v
+        && \qquad \text{Specific Heat at Constant Volume} \\[10pt]
+    & c_p = \left( \frac{\partial h}{\partial T} \right)_p
+        && \qquad \text{Specific Heat at Constant Pressure} \\[10pt]
+    & \Delta u = u_2 - u_1 = \int_{1}^{2} c_{v}(T) \, dT  
+        && \qquad \text{Internal Energy Change (Ideal Gas)} \\[10pt]
+    & \Delta h = h_2 - h_1 = \int_{1}^{2} c_{p}(T) \, dT 
+        && \qquad \text{Enthalpy Change (Ideal Gas)} \\[10pt]
+    & q = c_v (T_2 - T_1) = c_p (T_2 - T_1)
+        && \qquad \text{Heat Transfer (Perfect Gas)} \\[10pt]
+    & \eta_{th} = \frac{W_{\text{net,out}}}{Q_{\text{in}}} = \frac{Q_{\text{in}} - Q_{\text{out}}}{Q_{\text{in}}} = 1 - \frac{Q_{\text{out}}}{Q_{\text{in}}} = 1 - \frac{Q_L}{Q_H}
+        && \qquad \text{Thermal Efficiency} \\[10pt]
+    & COP_R = \frac{Q_L}{W_{\text{net,in}}}
+        && \qquad \text{COP (Refrigerator)} \\[10pt]
+    & COP_{HP} = \frac{Q_H}{W_{\text{net,in}}} = \frac{Q_H}{Q_H - Q_L}
+        && \qquad \text{COP (Heat Pump)} \\[10pt]
+    & COP_{HP} = COP_R + 1
+        && \qquad \text{COP Relationship}
+\end{alignat}
 
 \end{document}
