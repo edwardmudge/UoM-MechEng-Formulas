@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \usepackage[a4paper, margin=1in, headheight=15pt]{geometry}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -6,6 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
+\usepackage{titlesec}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -13,6 +14,13 @@
 \rhead{MECH22202}
 \renewcommand{\headrulewidth}{0.4pt}
 \cfoot{\thepage}
+
+% Updating subsection style
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{10pt}{5pt} 
+
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{5pt}{3pt}
 
 \title{\vspace{-1.25cm}MECH22202 Materials 2 \\ Formula Sheet}
 \date{}
@@ -23,6 +31,34 @@
 \maketitle
 \thispagestyle{fancy}
 
-% Add content here
+\vspace{-2cm}
+\section{Review}
+\begin{alignat}{2}
+    & \text{APF} = \frac{\text{Atom volume}}{\text{Unit cell volume}}
+        && \qquad \text{Atomic Packing Factor} \\[10pt]
+    & E \approx \frac{dF_N}{dr}
+        && \qquad \text{Elasticity (Force vs Interatomic distance)} \\[10pt]
+    & \sigma = \frac{F}{A_0}
+        && \qquad \text{Engineering Stress} \\[10pt]
+    & \epsilon = \frac{\Delta L}{L_0}
+        && \qquad \text{Engineering Strain} \\[10pt]
+    & \sigma_T = \frac{F}{A}
+        && \qquad \text{True Stress (Instantaneous Area)} \\[10pt]
+    & \epsilon_T = \ln\left(\frac{L}{L_0}\right)
+        && \qquad \text{True Strain} \\[10pt]
+    & G = H - TS 
+        && \qquad \text{Gibbs Free Energy (Enthalpy Form)} \\[10pt]
+    & G = \sum_{i=1}^{j} n_i G_i 
+        && \qquad \text{Total Gibbs Energy (Multi-phase)} \\[10pt]
+    & W_\alpha + W_L = 1 
+        && \qquad \text{Total Mass Balance} \\[10pt]
+    & W_\alpha C_\alpha + W_L C_L = C_o 
+        && \qquad \text{Component Mass Balance} \\[10pt]
+    & W_\alpha = \frac{C_L - C_o}{C_L - C_\alpha} 
+        && \qquad \text{Solid Fraction } (\alpha) \\[10pt]
+    & W_L = \frac{C_o - C_\alpha}{C_L - C_\alpha} 
+        && \qquad \text{Liquid Fraction } (L)
+\end{alignat}
+
 
 \end{document}
